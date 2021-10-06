@@ -1,0 +1,18 @@
+button {
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.header {
+  background-color: black;
+  color: white;
+}
+
+.grey {
+  background-color: rgb(210, 210, 210);
+}
