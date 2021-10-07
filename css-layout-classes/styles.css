@@ -13,18 +13,26 @@ body {
   display: flex;
 }
 
-.column-third {
+.column-full {
+  width: 100;
+}
+
+.column-one-third {
   width: 33%;
 }
 
-.column-third img {
+.column-one-third img {
   width: 100%;
 }
 
-.column-fourth {
+.column-one-fourth {
   width: 25%;
 }
 
-.column-fourth img {
+.column-one-fourth img {
   width: 100%;
+}
+
+.column-two-third {
+  width: 66%;
 }
