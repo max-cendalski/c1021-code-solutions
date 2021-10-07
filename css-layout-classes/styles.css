@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif, 'Courier New', Courier;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100;
+}
+
+.column-one-third {
+  width: 33%;
+}
+
+.column-one-third img {
+  width: 100%;
+}
+
+.column-one-fourth {
+  width: 25%;
+}
+
+.column-one-fourth img {
+  width: 100%;
+}
+
+.column-two-third {
+  width: 66%;
+}
