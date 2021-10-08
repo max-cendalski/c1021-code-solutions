@@ -9,51 +9,41 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
   background-color: rgb(25, 150, 218);
-  justify-content: center;
-  align-items: center;
 }
 
 .row {
   display: flex;
-  width: 90%;
-  justify-content: center;
+  padding: 0 70px;
 }
 
 .column-full {
   display: flex;
-  justify-content: center;
-  width: 100%;
   padding-top: 60px;
 }
 
 .column-full h1 {
   font-weight: lighter;
+  margin-bottom: 25px;
 }
 
 .column-third {
   width: 33%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 50px;
-  padding: 20px;
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
-  width: 35%;
+  align-items: center;
   border-radius: 100%;
   background-color: white;
-  align-items: center;
-  margin: 30px;
-  height: 110px;
+  height: 85px;
+  width: 25%;
 }
 
 .logo-container img {
@@ -61,9 +51,9 @@ body {
 }
 
 .title {
-  width: 100%;
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .title h2 {
@@ -71,12 +61,12 @@ body {
 }
 
 .text {
-  width: 80%;
+  width: 60%;
   color: rgb(189, 209, 221);
   text-align: center;
   font-weight: lighter;
-}
 
-.text p {
-  font-weight: 300;
+  .text p {
+    font-weight: 300;
+  }
 }
