@@ -22,7 +22,7 @@ function getFirstName(person) {
 }
 
 function getLastElement(array) {
-  return array.length - 1;
+  return array[array.length - 1];
 }
 
 console.log('function convertMinutesToSeconds output: ', convertMinutesToSeconds(5));
