@@ -14,6 +14,7 @@ var orderHistory = [
         type: 'book',
         price: 41.33,
         invoice: '',
+        writeProductReview: '',
         returnWindow: 'Sept7, 2020',
         additionalInfo: {
           author: 'Alexander, Christopher',
@@ -75,7 +76,7 @@ var orderHistory = [
           }
         }, {
           type: 'book',
-          price: 15.98,
+          price: 33.99,
           invoice: '',
           returnWindow: 'Aug 19, 2020',
           additionalInfo: {
