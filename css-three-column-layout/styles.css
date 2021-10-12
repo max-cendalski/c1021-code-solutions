@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0 auto;
+  background-color: rgb(25, 150, 218);
 }
 
 body {
@@ -11,11 +12,13 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: rgb(25, 150, 218);
 }
 
 .row {
   display: flex;
+}
+
+.padding-lr-70 {
   padding: 0 70px;
 }
 
