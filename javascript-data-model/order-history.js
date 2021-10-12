@@ -37,19 +37,21 @@ var orderHistory = [
       deliveredStatus: true,
       returnWindow: 'Aug 19, 2020',
       orderDetails: '',
-      item: {
-        type: 'computer parts',
-        price: 15.98,
-        invoice: '',
-        returnWindow: 'Aug 19',
-        additionalInfo: {
-          name: 'gamecube controllelr',
-          brand: 'Nintendo',
-          productReview: '',
-          buyAgain: '',
-          viewItem: ''
+      item: [
+        {
+          type: 'computer parts',
+          price: 15.98,
+          invoice: '',
+          returnWindow: 'Aug 19',
+          additionalInfo: {
+            name: 'gamecube controllelr',
+            brand: 'Nintendo',
+            productReview: '',
+            buyAgain: '',
+            viewItem: ''
+          }
         }
-      }
+      ]
     }
   ],
   [
