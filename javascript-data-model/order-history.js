@@ -10,19 +10,21 @@ var orderHistory = [
       returnWindow: 'Aug 19',
       buyAgain: '',
       orderDetails: '',
-      item: {
-        type: 'book',
-        price: 41.33,
-        invoice: '',
-        writeProductReview: '',
-        returnWindow: 'Sept7, 2020',
-        additionalInfo: {
-          author: 'Alexander, Christopher',
-          title: 'The timeless Way of Building',
-          productReview: '',
-          viewItem: ''
+      item: [
+        {
+          type: 'book',
+          price: 41.33,
+          invoice: '',
+          writeProductReview: '',
+          returnWindow: 'Sept7, 2020',
+          additionalInfo: {
+            author: 'Alexander, Christopher',
+            title: 'The timeless Way of Building',
+            productReview: '',
+            viewItem: ''
+          }
         }
-      }
+      ]
     }
   ],
   [
