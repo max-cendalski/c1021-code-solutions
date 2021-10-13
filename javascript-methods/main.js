@@ -58,5 +58,5 @@ console.log('value of firstAndLastName: ', firstAndLastName);
 
 var firstName = firstAndLastName[0];
 firstName.toUpperCase();
-var sayMyFirstName = firstName.toUpperCase();
-console.log('value of sayMyName: ', sayMyFirstName);
+var sayMyName = firstName.toUpperCase();
+console.log('value of sayMyName: ', sayMyName);
