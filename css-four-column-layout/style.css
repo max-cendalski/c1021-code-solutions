@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Barlow', sans-serif;
+}
+
+.container {
+  width: 70%;
+  background-color: rgb(247, 248, 250);
+}
+
+.header h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  width: 25%;
+}
+
+.column img {
+  width: 70%;
+}
+
+.images {
+  display: flex;
+}
+
+.logo {
+  width: 35%;
+  display: flex;
+}
+
+.text {
+  text-align: center;
+}
+
+.text h3 {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.text p {
+  font-size: 0.7rem;
+  padding-bottom: 30px;
+  font-weight: 200;
+}
