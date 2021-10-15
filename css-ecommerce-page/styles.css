@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1100px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  width: 18%;
+}
+
+.column-flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.column img {
+  width: 100%;
+}
+
+.text-content {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.text-content h3 {
+  margin-right: 30px;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+.price {
+  background-color: rgb(255, 242, 231);
+  margin-right: 10px;
+}
+
+span {
+  background-color: white;
+  color: rgb(215, 215, 215);
+  font-weight: 300;
+}
