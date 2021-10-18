@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Karla', sans-serif, monospace;
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  width: 70%;
+}
+
+.row {
+  display: flex;
+}
+
+.row-bottom-margin {
+  margin-bottom: 40px;
+}
+
+.column {
+  width: 50%;
+}
+
+.content {
+  display: flex;
+  width: 80%;
+}
+
+.header {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  margin-bottom: 20px;
+  font-size: 6rem;
+}
+
+.header p {
+  width: 60%;
+  color: rgb(90, 90, 90);
+  font-size: 1.7rem;
+  line-height: 3rem;
+  font-weight: 600;
+}
+
+.logo-container img {
+  width: 230px;
+}
+
+.text-container h4 {
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-right: 60px;
+  font-size: 1.7rem;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  font-weight: 700;
+}
+
+.text-container p {
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  padding-right: 45px;
+  font-weight: 400;
+}
+
+.link-to-learn {
+  width: 100%;
+  text-align: center;
+}
+
+.link-to-learn a {
+  border: 1px solid rgb(209, 76, 69);
+  color: rgb(209, 76, 69);
+  text-decoration: none;
+  padding: 5px 25px;
+  font-size: 0.9rem;
+}
+
+.btn {
+  text-align: center;
+  color: rgb(217, 107, 101);
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: rgb(217, 107, 101);
+  width: 300px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+button {
+  width: 12%;
+  height: 75px;
+  border: 4px solid rgb(217, 107, 101);
+}
