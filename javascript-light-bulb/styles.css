@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  background-color: rgb(254, 249, 241);
+  margin: 0 auto;
 }
 
 .container {
@@ -14,8 +14,10 @@
 .row-centered {
   width: 100%;
   height: 1000px;
+  display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(254, 249, 241);
 }
 
 .lightbulb {
@@ -23,5 +25,23 @@
   height: 450px;
   background-color: rgb(250, 234, 132);
   border-radius: 225px;
+  box-shadow: 5px 2px 40px rgb(250, 234, 132);
+}
+
+.lightbulb-dark {
+  width: 450px;
+  height: 450px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 225px;
+  box-shadow: 0 -40px 5px  rgb(12, 12, 12);
+}
+
+.row-centered-black {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(17, 17, 17);
   box-shadow: 5px 2px 40px rgb(250, 234, 132);
 }
