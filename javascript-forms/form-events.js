@@ -1,7 +1,7 @@
 
-var $name = document.forms[0].name;
-var $email = document.forms[0].email;
-var $message = document.forms[0].message;
+var $name = document.querySelector('#user-name');
+var $email = document.querySelector('#user-email');
+var $message = document.querySelector('#user-message');
 
 function handleFocus(event) {
   console.log('focus event was fired');
