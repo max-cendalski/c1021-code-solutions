@@ -15,7 +15,7 @@
 .open-modal-window {
   background-color: rgb(74, 74, 233);
   border-radius: 7px;
-  box-shadow: 10px, 10px 10px, rgb(20, 20, 41);
+  box-shadow: 3px 3px 3px rgb(49, 49, 180);
   width: 300px;
   height: 60px;
   margin: 20px;
@@ -57,8 +57,8 @@
 
 .survey-window-visible h2 {
   color: black;
-  font-weight: 800;
-  font-size: 1.9rem;
+  font-weight: 900;
+  font-size: 2.1rem;
   padding-top: 20px;
 }
 
@@ -66,6 +66,7 @@
   width: 150px;
   height: 60px;
   background-color: rgb(235, 93, 93);
+  box-shadow: 3px 3px 3px rgb(109, 56, 56);
   border: 0 solid;
   color: white;
   border-radius: 10px;
@@ -81,13 +82,13 @@
 
 .container-darkened {
   width: 100%;
-  background-color: rgba(0, 0, 0, 75%);
+  background-color: rgba(0, 0, 0, 85%);
 }
 
 .open-modal-window-darkened {
   background-color: rgb(16, 15, 46);
   border-radius: 7px;
-  box-shadow: 10px 10px 10px, rgb(10, 10, 17);
+  box-shadow: 5px 5px 5px rgb(10, 10, 17);
   width: 300px;
   height: 60px;
   margin: 20px;
