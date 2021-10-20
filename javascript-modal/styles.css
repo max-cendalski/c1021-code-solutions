@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0 auto;
+  font-family: sans-serif;
 }
 
 .container {
@@ -14,21 +15,22 @@
 .open-modal-window {
   background-color: rgb(74, 74, 233);
   border-radius: 7px;
-  width: 100%;
-  width: 330px;
-  height: 75px;
-  margin: 10px;
+  box-shadow: 10px, 10px 10px, rgb(20, 20, 41);
+  width: 300px;
+  height: 60px;
+  margin: 20px;
+  text-align: center;
 }
 
 .open-modal-window a {
-  text-align: center;
   text-decoration: none;
-  color: white;
 }
 
 .open-modal-window h1 {
-  font-size: 2.6rem;
-  padding-top: 12px;
+  font-size: 2.3rem;
+  padding-top: 10px;
+  color: white;
+  font-weight: 500;
 }
 
 .row-centered {
@@ -42,35 +44,63 @@
   display: none;
 }
 
-.survey-window {
+.survey-window-visible {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: grey;
   border-radius: 5px;
+  background-color: white;
   width: 30%;
-  height: 300px;
+  height: 280px;
+  box-shadow: 10px 10px 10px, black;
 }
 
-.survey-window h2 {
+.survey-window-visible h2 {
   color: black;
   font-weight: 800;
-  font-size: 2.3rem;
+  font-size: 1.9rem;
+  padding-top: 20px;
 }
 
-.survey-window a {
-  width: 180px;
-  height: 80px;
+.survey-window-visible a {
+  width: 150px;
+  height: 60px;
   background-color: rgb(235, 93, 93);
   border: 0 solid;
   color: white;
   border-radius: 10px;
   text-align: center;
   text-decoration: none;
-  padding-top: 15px;
 }
 
-.survey-window h3 {
-  font-size: 2.8rem;
+.survey-window-visible h3 {
+  font-size: 2.5rem;
   font-weight: 400;
+  padding-top: 7px;
+}
+
+.container-darkened {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 75%);
+}
+
+.open-modal-window-darkened {
+  background-color: rgb(16, 15, 46);
+  border-radius: 7px;
+  box-shadow: 10px 10px 10px, rgb(10, 10, 17);
+  width: 300px;
+  height: 60px;
+  margin: 20px;
+  text-align: center;
+}
+
+.open-modal-window-darkened a {
+  text-decoration: none;
+}
+
+.open-modal-window-darkened h1 {
+  font-size: 2.3rem;
+  padding-top: 10px;
+  color: rgba(50, 50, 50);
+  font-weight: 500;
 }
