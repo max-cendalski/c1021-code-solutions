@@ -56,3 +56,41 @@ var pokedex = [
     imageUrl: 'images/blastoise.png'
   }
 ];
+
+function renderPokemon(pokemon) {
+  var columnThird = document.createElement('div');
+  columnThird.setAttribute('class', 'column-third');
+
+  var pokemonCard = document.createElement('div');
+  pokemonCard.setAttribute('class', 'pokemon-card');
+  columnThird.appendChild(pokemonCard);
+
+  var pokemonImage = document.createElement('img');
+  pokemonImage.setAttribute('src', pokemon.imageURL);
+
+  var pokemonCardText = document.createElement('div');
+  pokemonCardText.setAttribute('class', 'pokemon-card-text');
+
+  var header2 = document.createElement('h2');
+  header2.textContent = pokemon.name;
+  var header3 = document.createElement('h3');
+  header3.textContent = pokemon.number;
+  var paragraph = document.createElement('p');
+  paragraph.textContent = pokemon.description;
+
+  pokemonCard.appendChild(pokemonImage);
+  pokemonCard.appendChild(pokemonCardText);
+  pokemonCardText.appendChild(header2);
+  pokemonCardText.appendChild(header3);
+  pokemonCardText.appendChild(paragraph);
+
+  return columnThird;
+}
+
+for (var i = 0; i <= pokedex.length - 1; i++) {
+  var rowEl = document.querySelector('.row');
+
+  renderPokemon(pokedex[i]);
+  var ret = renderPokemon(pokedex);
+  rowEl.appendChild(ret);
+}
