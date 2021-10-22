@@ -18,7 +18,7 @@ console.log('array books: ', books, typeof books);
 var booksToString = JSON.stringify(books);
 console.log('JSON String of array books:', booksToString, typeof booksToString);
 
-var jsonString = '{"name":"2346"}';
+var jsonString = '{"id":"2346","name":"Max"}';
 
 console.log('json string: ', jsonString, typeof jsonString);
 
