@@ -1,17 +1,12 @@
 /* exported truncate */
 
 // declare 2 variables. One empty string ,second string with value = ...
-
 // use slice method to cut the string
-//
-
-/* var max = 'max cendalski';
+// concat two strings
 
 function truncate(length, string) {
   var newString = '';
+  var dots = '...';
   newString = string.slice(0, length);
-  return newString;
+  return newString.concat('', dots);
 }
-
-console.log(truncate(7, max));
- */
