@@ -5,9 +5,8 @@ var $darkenedBackground = document.querySelector('.container');
 
 $openModalWindow.addEventListener('click', handlingOpenModal);
 function handlingOpenModal(event) {
-
+  event.preventDefault();
   $darkenedBackground.className = 'container-darkened';
   $surveyWindow.className = 'survey-window-visible';
   $openModalWindow.className = 'open-modal-window-darkened';
-  event.preventDefault();
 }
