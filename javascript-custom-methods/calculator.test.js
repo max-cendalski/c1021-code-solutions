@@ -97,7 +97,5 @@ describe('calculator', function () {
       var output = calculator.getAverage(input);
       expect(output).to.equal(94);
     });
-
   });
-
 });
