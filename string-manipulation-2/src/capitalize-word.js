@@ -6,19 +6,19 @@
 // write conditional statemant
 
 function capitalizeWord(word) {
-  var lowerCaseString = '';
-  var upperCaseLetter = '';
-  var resultOfSlice = '';
-  var result = '';
-  lowerCaseString = word.toLowerCase();
-  upperCaseLetter = lowerCaseString.charAt(0).toUpperCase();
-  resultOfSlice = lowerCaseString.slice(1);
-  result = upperCaseLetter.concat(resultOfSlice);
 
-  if (lowerCaseString === 'javascript') {
+  if (word.toLowerCase() === 'javascript') {
     return 'JavaScript';
   } else {
+    var lowerCaseString = '';
+    lowerCaseString = word.toLowerCase();
+    var upperCaseLetter = '';
+    var resultOfSlice = '';
+    var result = '';
+
+    upperCaseLetter = lowerCaseString.charAt(0).toUpperCase();
+    resultOfSlice = lowerCaseString.slice(1);
+    result = upperCaseLetter.concat(resultOfSlice);
     return result;
   }
-
 }
