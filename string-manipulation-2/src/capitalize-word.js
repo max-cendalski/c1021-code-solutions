@@ -10,15 +10,11 @@ function capitalizeWord(word) {
   if (word.toLowerCase() === 'javascript') {
     return 'JavaScript';
   } else {
-    var lowerCaseString = '';
-    lowerCaseString = word.toLowerCase();
-    var upperCaseLetter = '';
-    var resultOfSlice = '';
-    var result = '';
+    var lowerCaseString = word.toLowerCase();
+    var upperCaseLetter = lowerCaseString.charAt(0).toUpperCase();
+    var resultOfSlice = lowerCaseString.slice(1);
+    var result = upperCaseLetter.concat(resultOfSlice);
 
-    upperCaseLetter = lowerCaseString.charAt(0).toUpperCase();
-    resultOfSlice = lowerCaseString.slice(1);
-    result = upperCaseLetter.concat(resultOfSlice);
     return result;
   }
 }
