@@ -50,7 +50,7 @@
   justify-content: space-around;
   border-radius: 5px;
   background-color: white;
-  width: 30%;
+  width: 40%;
   height: 280px;
   box-shadow: 10px 10px 10px, black;
 }
@@ -58,26 +58,26 @@
 .survey-window-visible h2 {
   color: black;
   font-weight: 900;
-  font-size: 2.1rem;
+  font-size: 2rem;
   padding-top: 20px;
 }
 
 .survey-window-visible a {
-  width: 150px;
-  height: 60px;
+  width: 120px;
+  height: 50px;
   background-color: rgb(235, 93, 93);
   box-shadow: 3px 3px 3px rgb(109, 56, 56);
   border: 0 solid;
   color: white;
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: center;
   text-decoration: none;
 }
 
 .survey-window-visible h3 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 400;
-  padding-top: 7px;
+  padding-top: 5px;
 }
 
 .container-darkened {
