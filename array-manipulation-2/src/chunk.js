@@ -1,23 +1,25 @@
 /* exported chunk */
-/*
+
 var array = ['one', 'two', 'three', 'four', 'five'];
 
 function chunk(array, size) {
+  var arrayItems = [];
+  var arrayItems1 = [];
   var firstArray = [];
   var secondArray = [];
   var result = [];
   for (var i = 0; i < size; i++) {
-    firstArray.push(array[i]);
-    // console.log(firstArray);
+    arrayItems.push(array[i]);
+    firstArray.push(arrayItems);
   }
-  for (var j = array.length - size; j < array.length; j++) {
-    secondArray.push(array[j]);
-    // console.log(secondArray);
-  }
-  result.push(firstArray);
-  result.push(secondArray);
-  console.log(result);
+  /*   for (var j = size; j < array.length; j++) {
+    arrayItems1.push(array[j]);
+    secondArray.push(arrayItems1);
+    arrayItems1 = [];
+  } */
+  console.log(firstArray);
+
   return result;
 }
 
-console.log(chunk(array, 3)); */
+console.log(chunk(array, 2));
