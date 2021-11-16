@@ -1,27 +1,16 @@
 /* exported omit */
 
-var source = { foo: 1, bar: 2, baz: 3 };
-
-var keys = ['foo', 'baz'];
+// create variable for newObject
+// create in loop to iterate over all items in the source object
+// use i !include method to check if there is no match,
+// add property to newObject
 
 function omit(source, keys) {
   var newObject = {};
-  // debugger;
   for (var property in source) {
-    debugger;
-    for (var i = 0; i < keys.length; i++) {
-      // console.log(property);
-      console.log(keys[i]);
-
-      if (property === keys[i]) {
-        break;
-      } if (property !== keys[i]) {
-        newObject[property] = source[property];
-      }
+    if (!keys.includes(property)) {
+      newObject[property] = source[property];
     }
   }
-
   return newObject;
 }
-
-console.log(omit(source, keys));
