@@ -14,7 +14,5 @@ function invert(source) {
     newObject[newArray[counter]] = property;
     counter++;
   }
-
   return newObject;
-
 }
