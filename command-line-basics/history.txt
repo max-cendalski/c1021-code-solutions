@@ -1,0 +1,422 @@
+    1  git config --global user.name"Korneliu"
+    2  git config --global user.email "olbiton@gmail.com"
+    3  git config --global --list
+    4  git confit --global user.name "Korneliu"
+    5  git config --global user.name "Korneliu"
+    6  git config --global --list
+    7  cd repos/code-journal/
+    8  git status
+    9  git log
+   10  git reset --hard head~2
+   11  git pull origin master
+   12  cd repos
+   13  cd c1
+   14  cd c1021-code-solutions/
+   15  git branch http-messages
+   16  git switch http-messages 
+   17  git status .
+   18  gti add http-messages/
+   19  git commit -m"initial commit"
+   20  cd http-messages
+   21  http http://example.com
+   22  http GET http://example.com
+   23  http GET http://example.com --verbose
+   24  clear
+   25  http GET http://example.com --verbose
+   26  clear
+   27  http --body GET https://jsonplaceholder.typicode.com/users > users.json
+   28  http --body GET https://example.com > index.html
+   29  git status
+   30  git add .
+   31  git commit -m"completed http-messages"
+   32  git status
+   33  git push origin http-messages 
+   34  git switch master
+   35  cd ..
+   36  git branch javascript-ajax
+   37  git switch javascript-ajax 
+   38  git status
+   39  git add javascript-ajax/
+   40  git commit -m"initial commit"
+   41  git status
+   42  cd repos/
+   43  cd c1021-code-solutions/
+   44  git add .
+   45  git commit -m"completed javascript-ajax"
+   46  git push origin javascript-ajax 
+   47  cd repos
+   48  cd c1021-code-solutions/
+   49  git switch object-manipulation-2
+   50  git switch master
+   51  git switch object-manipulation-2
+   52  git status
+   53  git add .
+   54  git commit -m"initial commit two"
+   55  git switch master
+   56  cd ..
+   57  ls
+   58  cd code-journal/
+   59  cd repos
+   60  cd code-journal/
+   61  git status
+   62  git add .
+   63  git commit -m"updated entry form's submit handler function,to update existing entry"
+   64  git push origin users-can-edit-an-entry 
+   65  git remote set-url origin git@github.com:Korneliu/code-journal.git
+   66  git push origin users-can-edit-an-entry 
+   67  cd repos
+   68  cd c1021-code-solutions/
+   69  git switch object-manipulation-2
+   70  git switch dom-event-delegation 
+   71  git switch array-manipulation-2
+   72  git status
+   73  git switch object-manipulation-2
+   74  git add .
+   75  cd repos
+   76  cd code-journal/
+   77  git status
+   78  git add .
+   79  git commit -m"fixed- only by clicking pen icon user can be redirected to edit form" 
+   80  git commit -m"fixed- only by clicking pen icon user can be redirected to edit form" --no-verify
+   81  git switch master
+   82  cd ..
+   83  ls
+   84  cd c1021-code-solutions/
+   85  ls
+   86  git status
+   87  git commit -m"finished pick function"
+   88  git status
+   89  git add .
+   90  git commit -m"finished pick function"
+   91  git add .
+   92  git commit -m"started omit function" --no-verify
+   93  cd ..
+   94  cd code-journal/
+   95  git status
+   96  git switch users-can-edit-an-entry 
+   97  git status
+   98  git add .
+   99  git commit -m"corrected handleEdit function"
+  100  git push origin users-can-edit-an-entry 
+  101  cd repos
+  102  cd c1021-code-solutions/
+  103  git switch master
+  104  git status
+  105  git add .
+  106  git commit -m"added break; to the loop, still not working" --no-verify
+  107  git switch master
+  108  cd repos
+  109  cd c1021-code-solutions/
+  110  git switch object-manipulation-2
+  111  git add .
+  112  git commit -m"finished omit section"
+  113  cd ..
+  114  cd code-journal/
+  115  git status
+  116  git branch users-can-delete-an-entry
+  117  git switch users-can-delete-an-entry 
+  118  cd repos
+  119  cd c1021-code-solutions/
+  120  git switch array-manipulation-2
+  121  git add .
+  122  git commit -m"corrected includes section"
+  123  git push origin array-manipulation-2
+  124  git switch javascript-bank 
+  125  git status
+  126  git add .
+  127  git commit -m"corrected Bank prototype.openAccount"
+  128  git push origin javascript-bank 
+  129  cd ..
+  130  ls
+  131  cd code-journal/
+  132  git add .
+  133  git commit -m'created Delete Entry button"
+  134  "
+  135  '
+  136  git add .
+  137  git commit -m"created event for removing entry" --no-verify
+  138  git add .
+  139  cd repos
+  140  cd code-journal/
+  141  git add .
+  142  git commit -m"finished cancel button"
+  143  git add .
+  144  git commit -m"added edit entry header"
+  145  git push origin users-can-delete-an-entry 
+  146  cd repos
+  147  cd code-journal/
+  148  git status
+  149  git add .
+  150  git commit -m"fixed modal"
+  151  git switch master
+  152  cd ..
+  153  git clone git@github.com:max-cendalski/ajax-project.git
+  154  ls
+  155  cd ajax-project/
+  156  git branch User can search for a recipe
+  157  git branch User-can-search-for-a-recipe
+  158  git switch User-can-search-for-a-recipe 
+  159  git status
+  160  git add .
+  161  git commit -m"created header"
+  162  git status
+  163  git switch master
+  164  git add .
+  165  git commit -m"started inpu"
+  166  git switch master
+  167  npm ci
+  168  git switch User-can-search-for-a-recipe 
+  169  git add .
+  170  git commit -m"added form for mobile"
+  171  cd repos
+  172  cd ajax-project/
+  173  git status
+  174  git add .
+  175  cd repos
+  176  cd c1021-code-solutions/
+  177  git switch object-manipulation-2
+  178  cd repos
+  179  cd c1
+  180  cd c1021-code-solutions/
+  181  git status
+  182  git add .
+  183  git commit -m"completed invert section"
+  184  git add .
+  185  cd repos
+  186  cd c1021-code-solutions/
+  187  git status
+  188  git add .
+  189  git git add .
+  190  git add .
+  191  git status
+  192  git commit -m"completed defaults function"
+  193  git switch master
+  194  git switch object-manipulation-2
+  195  git status
+  196  git push origin object-manipulation-2
+  197  git switch master
+  198  git switch array-manipulation-2
+  199  git status
+  200  git switch object-manipulation-2
+  201  git status
+  202  git switch master 
+  203  git branch string-manipulation-3
+  204  git switch string-manipulation-3
+  205  git commit -m"initial commit"
+  206  git switch object-manipulation-2
+  207  git status
+  208  git push origin object-manipulation-2
+  209  git switch string-manipulation-3
+  210  git status
+  211  git add .
+  212  git commit -m"completed isPalindromic function"
+  213  cd repos
+  214  cd c1021-code-solutions/
+  215  git switch master
+  216  git status
+  217  git add .
+  218  git commit -m
+  219  git commit -m"added conditional statemant to function isAnagram"
+  220  git status
+  221  git commit -m"added conditional statemant to function isAnagram" --no-verify
+  222  git switch master
+  223  git switch string-manipulation-3
+  224  git push origin string-manipulation-3
+  225  git switch master
+  226  git branch es6-const-let
+  227  git switch es6-const-let 
+  228  git status
+  229  git add .
+  230  git commit -m"inital commit"
+  231  git add .
+  232  git status
+  233  git commit -m"completed es6-const-let"
+  234  git push origin es6-const-let
+  235  git switch master
+  236  git branch es6-template-literals
+  237  git switch es6-template-literals 
+  238  git add .
+  239  git commit -m"inital commit"
+  240  git status
+  241  git add .
+  242  git commit -m"completed es6-template-literals"
+  243  git add .
+  244  git commit -"corrected last string"
+  245  git commit -m"corrected console.log"
+  246  git push origin es6-template-literals 
+  247  git status
+  248  git switch master
+  249  git switch object-manipulation-3
+  250  git status
+  251  git switch object-manipulation-2
+  252  git status
+  253  git switch master
+  254  git switch es6-destructuring
+  255  git switch es6-destructuring/
+  256  git branch es6-destructuring
+  257  git switch es6-destructuring 
+  258  git add .
+  259  git status
+  260  git add .
+  261  git commit -m"initial commit"
+  262  cd repos
+  263  cd c1021-code-solutions/
+  264  git status
+  265  git add .
+  266  git commit -m"finished object section"
+  267  git status
+  268  git add .
+  269  git commit -m"completed es6-destructuring"
+  270  git status
+  271  git add .
+  272  git commit -m"finished es6-destructuring"
+  273  git push origin es6-destructuring 
+  274  git switch master
+  275  cd ..
+  276  ls
+  277  cd ajax-project/
+  278  git switch master
+  279  git switch user-can-define-nutrition-content-for-searched-recipes 
+  280  git switch master
+  281  ls
+  282  git switch User-can-search-for-a-recipe 
+  283  git switch master
+  284  git switch user-can-define-nutrition-content-for-searched-recipes 
+  285  cd repos
+  286  cd c1021-code-solutions/
+  287  git branch es6-arrow-functions
+  288  git switch es6-arrow-functions 
+  289  git status
+  290  git add .
+  291  git commit -m"initial commit"
+  292  git status
+  293  git add .
+  294  git commit -m"completed es6-arrow-functions"
+  295  git push origin es6-arrow-functions 
+  296  git switch master
+  297  git status
+  298  git pull origin master
+  299  git statuts
+  300  git status
+  301  ls
+  302  cd command-line-basics/
+  303  pwd
+  304  git branch command-line-basics
+  305  git switch command-line-basics 
+  306  pwd
+  307  ls
+  308  man history
+  309  man cat
+  310  cat laziness.txt
+  311  cat impatience.txt
+  312  cat hubris.txt
+  313  man history
+  314  man cat
+  315  cat laziness.txt impatience.txt hubris.txt
+  316  cat laziness.txt impatience.txt hubris.txt > three-viruses.txt
+  317  cat three-viruses.txt 
+  318  ls
+  319  man ls
+  320  ls -a
+  321  ls -F
+  322  ls -aF lfz-staff > lfz-staff/contents.txt
+  323  cat lfz-staff/contents.txt
+  324  pwd
+  325  man pwd
+  326  pwd
+  327  pwd > i-was-here.txt
+  328  ls
+  329  cat i-was-here.txt
+  330  man echo
+  331  echo "Hello, World!"
+  332  echo "Hello, World!" > hello.txt
+  333  ls
+  334  cat hello.txt 
+  335  man cat
+  336  man touch
+  337  touch tag-your-it.txt
+  338  touch snoot/boop.txt
+  339  ls snoot
+  340  man mkdir
+  341  mkdir parent
+  342  ls 
+  343  mkdir -p parent/child/grandchild
+  344  mkdir parent/child/grandchild/.gitkeep
+  345  ls -a parent/child/grandchild
+  346  man mv
+  347  m pokiemans pokemon
+  348  mv pokiemans pokemon
+  349  ls
+  350  man rm
+  351  rm lol.txt
+  352  ls
+  353  man rm
+  354  rm -r kill-me/
+  355  ls
+  356  man cp
+  357  cp and-then.txt no-and-then.txt
+  358  ls
+  359  cat and-then.txt
+  360  cat no-and-then.txt
+  361  man history
+  362  history
+  363  man history
+  364  touch history > command-history.txt
+  365  ls
+  366  cat history
+  367  ls history
+  368  cat history/command-history.txt
+  369  ls
+  370  ls history
+  371  cat history
+  372  ls history/command-history.txt
+  373  cd history
+  374  cat history
+  375  cat command-history.txt
+  376  rm command-history.txt
+  377  ls
+  378  history > command-history.txt
+  379  ls
+  380  rm command-history.txt 
+  381  ls
+  382  cat history
+  383  man history
+  384  ls
+  385  cat history
+  386  ls history
+  387  man history
+  388  cat laziness.txt
+  389  man cat
+  390  rm history
+  391  mkdir history
+  392  ls
+  393  touch history/command-history.txt
+  394  cat history/command-history.txt
+  395  ls history
+  396  history
+  397  ls
+  398  man history
+  399  ~./history
+  400  cd ..
+  401  ./history
+  402  cd ~./history
+  403  cd repos
+  404  cd c1021-code-solutions/
+  405  history
+  406  man history
+  407  ls
+  408  cd command-line-basics/
+  409  ls
+  410  rm history
+  411  cd history
+  412  ls
+  413  rm comman-history.txt
+  414  rm command-history.txt
+  415  ls
+  416  cd ..
+  417  ls
+  418  rm history
+  419  rem -r history
+  420  rm -r history
+  421  ls
+  422  history > history.txt
