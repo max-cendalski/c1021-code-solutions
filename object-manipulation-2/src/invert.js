@@ -7,12 +7,9 @@
 // each iteration assing new key/value pair
 
 function invert(source) {
-  var newArray = Object.values(source);
   var newObject = {};
-  var counter = 0;
   for (var property in source) {
-    newObject[newArray[counter]] = property;
-    counter++;
+    newObject[source[property]] = property;
   }
   return newObject;
 }
