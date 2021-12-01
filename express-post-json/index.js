@@ -18,8 +18,8 @@ app.post('/api/grades', (req, res) => {
   res.setHeader('content-type', 'application/json', 'charset Utf-8');
   var gradeObject = req.body;
   gradeObject.id = nextId;
-  nextId++;
   grades[nextId] = gradeObject;
+  nextId++;
   res.json(grades);
   res.status(201);
 });
