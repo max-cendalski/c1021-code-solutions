@@ -33,9 +33,10 @@ app.get('/api/notes', (req, res) => {
 
 app.get('/api/notes/:id', (req, res) => {
   var id = parseInt(req.params.id);
-  if (id !== Number.isInteger(id)) {
-    console.log('typeof:', typeof id);
-    res.sendStatus(400);
+  if (!Number.isInteger(id) || id <= 0) {
+    res.status(400).json({ error: 'id must be a number' });
+  } else if (!notes[id]) {
+    res.status(404).json({ error: "can't find note with id " + id });
   } else {
     res.json(notes[id]);
   }
