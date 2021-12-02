@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require('fs');
 var app = express();
 express.json();
 app.use(express.json());
@@ -31,7 +32,15 @@ app.post('/api/notes', (req, res) => {
     newNoteObject.id = notesObject.nextId;
     notesObject.notes[newNoteObject.id] = newNoteObject;
     notesObject.nextId++;
-    res.status(201).json(newNoteObject);
+    var objectToSave = JSON.stringify(notesObject);
+    fs.writeFile('data.json', objectToSave, { flag: 'r+' }, err => {
+      if (err) {
+        res.status(500).json({ error: 'An unexpected error occuried' });
+      } else {
+        res.status(201).json(newNoteObject);
+      }
+    });
+
   }
 });
 
