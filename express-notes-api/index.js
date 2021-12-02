@@ -29,18 +29,18 @@ app.post('/api/notes', (req, res) => {
   if (!newNoteObject.content) {
     res.status(400).json({ error: 'content is a required field' });
   } else {
-    newNoteObject.id = notesObject.nextId;
-    notesObject.notes[newNoteObject.id] = newNoteObject;
+    var count = notesObject.nextId;
+    newNoteObject.id = count;
+    notesObject.notes[count] = newNoteObject;
     notesObject.nextId++;
     var objectToSave = JSON.stringify(notesObject);
-    fs.writeFile('data.json', objectToSave, { flag: 'r+' }, err => {
+    fs.writeFile('./data.json', objectToSave, err => {
       if (err) {
         res.status(500).json({ error: 'An unexpected error occuried' });
       } else {
         res.status(201).json(newNoteObject);
       }
     });
-
   }
 });
 
@@ -52,7 +52,27 @@ app.delete('/api/notes/:id', (req, res) => {
     res.status(404).json({ error: "can't find note with id " + id });
   } else {
     delete notesObject.notes[id];
-    res.status(204).json();
+    var objectToSave = JSON.stringify(notesObject);
+    fs.writeFile('./fake/data.json', objectToSave, err => {
+      if (err) {
+        res.status(500).json({ error: 'An unexpected error occuried' });
+      } else {
+        res.status(204).json({ notesObject });
+      }
+    });
+  }
+});
+
+app.put('/api/notes/:id', (req, res) => {
+  var id = parseInt(req.params.id);
+  if (!Number.isInteger(id) || !req.body) {
+    res.status(400).json({ error: 'id must be a positive integer' });
+  } else if (!notesObject.notes[id]) {
+    res.status(404).json({ error: 'No matching note' });
+  } else {
+    console.log(id);
+    console.log(req.body);
+    res.status(200).json({ error: 'no error' });
   }
 });
 
@@ -60,3 +80,14 @@ app.listen(3000, () => {
   // eslint-disable-next-line no-console
   console.log('Server is up on port 3000');
 });
+
+/* {
+  "nextId":10,
+  "notes":{
+    "2":{"id":2,"content":"The event loop, this, closures, and prototypal inheritance are special about JavaScript."},
+    "5":{"id":5,"content":"In JavaScript, the value of `this` is determined when a function is called; not when it is defined."},
+    "6":{"id":6,"content":"A closure is formed when a function retains access to variables in its lexical scope."},
+    "9":{"id":9,"content":"Inertia is a property of matter."}
+  }
+}
+ */
