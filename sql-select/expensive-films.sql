@@ -1,4 +1,4 @@
 select *
   from "films"
- where "replacementCost" > 29.80
+ order by "replacementCost"
  limit 10;
