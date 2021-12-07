@@ -30,6 +30,7 @@ app.post('/api/notes', (req, res) => {
     res.status(400).json({ error: 'content is a required field' });
   } else {
     var count = notesObject.nextId;
+    notesObject.notes[count] = newNoteObject;
     newNoteObject.id = count;
     notesObject.notes[count] = newNoteObject;
     notesObject.nextId++;
@@ -53,7 +54,7 @@ app.delete('/api/notes/:id', (req, res) => {
   } else {
     delete notesObject.notes[id];
     var objectToSave = JSON.stringify(notesObject);
-    fs.writeFile('./fake/data.json', objectToSave, err => {
+    fs.writeFile('./data.json', objectToSave, err => {
       if (err) {
         res.status(500).json({ error: 'An unexpected error occuried' });
       } else {
@@ -70,7 +71,16 @@ app.put('/api/notes/:id', (req, res) => {
   } else if (!notesObject.notes[id]) {
     res.status(404).json({ error: 'No matching note' });
   } else {
-    res.status(200).json({ error: 'no error' });
+    notesObject.notes[id].content = req.body.content;
+    var updatedObject = notesObject.notes[id];
+    var objectToSave = JSON.stringify(notesObject);
+    fs.writeFile('./data.json', objectToSave, err => {
+      if (err) {
+        res.status(500).json({ error: 'An unexpected error occuried' });
+      } else {
+        res.status(200).json(updatedObject);
+      }
+    });
   }
 });
 
