@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev:server": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Max",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "nodemon": "^2.0.15",
     "pg": "^8.7.1"
+  },
+  "nodemonConfig": {
+    "ignore": ["test/*", "docs/*"],
+    "delay": 2500
   }
 }
