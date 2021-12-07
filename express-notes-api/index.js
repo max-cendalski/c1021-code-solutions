@@ -70,8 +70,6 @@ app.put('/api/notes/:id', (req, res) => {
   } else if (!notesObject.notes[id]) {
     res.status(404).json({ error: 'No matching note' });
   } else {
-    console.log(id);
-    console.log(req.body);
     res.status(200).json({ error: 'no error' });
   }
 });
@@ -80,14 +78,3 @@ app.listen(3000, () => {
   // eslint-disable-next-line no-console
   console.log('Server is up on port 3000');
 });
-
-/* {
-  "nextId":10,
-  "notes":{
-    "2":{"id":2,"content":"The event loop, this, closures, and prototypal inheritance are special about JavaScript."},
-    "5":{"id":5,"content":"In JavaScript, the value of `this` is determined when a function is called; not when it is defined."},
-    "6":{"id":6,"content":"A closure is formed when a function retains access to variables in its lexical scope."},
-    "9":{"id":9,"content":"Inertia is a property of matter."}
-  }
-}
- */
