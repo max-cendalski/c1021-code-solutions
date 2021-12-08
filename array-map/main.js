@@ -7,3 +7,13 @@ const languages = [
   'PHP Hypertext Preprocessor',
   'Structured Query Language'
 ];
+
+const doubled = numbers.map(number => number * 2);
+const prices = numbers.map(number => `$${Number.parseFloat(number).toFixed(2)}`);
+const upperCased = languages.map(word => word.toUpperCase());
+const firstLetter = languages.map(word => word[0]);
+
+console.log(doubled);
+console.log(prices);
+console.log(upperCased);
+console.log(firstLetter);
