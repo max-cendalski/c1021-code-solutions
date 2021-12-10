@@ -43,6 +43,32 @@ app.post('/api/grades', (req, res) => {
   }
 });
 
+app.delete('/api/grades/:gradeId', (req, res) => {
+  const gradeId = Number(req.params.gradeId);
+
+  if (!Number.isInteger(gradeId) || gradeId <= 0) {
+    res.status(400).json({ error: 'gradeId must be positive integer' });
+    return;
+  }
+  const sql = `
+    delete from "grades"
+    where "gradeId" = $1
+    `;
+  const params = [gradeId];
+  db.query(sql, params)
+    .then(result => {
+      console.log('result:', result);
+      console.log('resul.rows[0]:', result.rows[0]);
+      const grade = result.rows[0];
+      if (!grade) {
+        res.status(404).json({
+          error: `Cannot find grade with gradeId ${gradeId}`
+        });
+      } else {
+        res.status(204).send('success');
+      }
+    });
+});
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
   console.log('server is up on port 3000');
