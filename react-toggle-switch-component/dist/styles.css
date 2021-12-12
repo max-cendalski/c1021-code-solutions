@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#root {
+  width: 960px;
+  margin-top: 40px;
+}
+
+.switch {
+  position: relative;
+  border: 1px solid black;
+  width: 250px;
+  height: 100px;
+  background-color: rgb(106, 168, 79);
+  border-radius: 50px;
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+  border: 1px solid black;
+}
