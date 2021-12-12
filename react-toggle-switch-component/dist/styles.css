@@ -6,24 +6,55 @@
 #root {
   width: 960px;
   margin-top: 40px;
+  display: flex;
 }
 
-.switch {
+.row {
+  display: flex;
+}
+
+.switch-container {
+  width: 250px;
   position: relative;
-  border: 1px solid black;
+}
+
+.text-container {
+  width: 250px;
+}
+
+.switch-left {
+  border: 2px solid black;
+  width: 250px;
+  height: 100px;
+  background-color: rgb(226, 226, 226);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.switch-right {
+  border: 2px solid black;
   width: 250px;
   height: 100px;
   background-color: rgb(106, 168, 79);
   border-radius: 50px;
-  z-index: 1;
+  cursor: pointer;
 }
 
-.circle {
+.circle-left {
   position: absolute;
   background-color: white;
   border-radius: 50%;
   width: 100px;
-  height: 100px;
-  z-index: 2;
+  height: 97px;
   border: 1px solid black;
+}
+
+.circle-right {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 97px;
+  border: 1px solid black;
+  right: 0;
 }
