@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#root {
+  width: 960px;
+}
+
+.row {
+  display: flex;
+}
+
+.circle-container {
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+.stop-watch {
+  font-size: 2rem;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
