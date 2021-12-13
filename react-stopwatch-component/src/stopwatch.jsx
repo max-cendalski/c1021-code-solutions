@@ -30,7 +30,7 @@ class Stopwatch extends React.Component {
   }
 
   handleTimer() {
-    if (this.state.time > 0) {
+    if (this.state.time > 0 && this.state.timerOn === false) {
       clearInterval(this.timerId);
       this.setState({
         timerOn: false,
