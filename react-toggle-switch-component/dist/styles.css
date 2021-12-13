@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#root {
+  width: 960px;
+  margin-top: 40px;
+  display: flex;
+}
+
+.row {
+  display: flex;
+}
+
+.switch-container {
+  width: 250px;
+  position: relative;
+}
+
+.switch {
+  border: 2px solid black;
+  width: 250px;
+  height: 100px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.switch-left {
+  background-color: rgb(226, 226, 226);
+}
+
+.switch-right {
+  background-color: rgb(106, 168, 79);
+}
+
+.circle-left {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 97px;
+  border: 2px solid black;
+}
+
+.circle-right {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 100px;
+  height: 97px;
+  border: 2px solid black;
+  right: 0;
+}
