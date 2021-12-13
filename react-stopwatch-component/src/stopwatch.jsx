@@ -4,18 +4,17 @@ class Stopwatch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      timer: false,
-      icon: '../src/icons/play-solid.svg',
-      time: 0
+      time: 0,
+      timerOn: false
     };
     this.handleTimer = this.handleTimer.bind(this);
     this.handleButton = this.handleButton.bind(this);
   }
 
-  handleTimer() {
-    if (this.state.timer === false) {
+  handleButton() {
+    if (this.state.timerOn === false) {
       this.setState({
-        timer: !this.state.timer
+        timerOn: !this.state.timerOn
       });
       this.timerId = setInterval(() => {
         this.setState({
@@ -25,24 +24,17 @@ class Stopwatch extends React.Component {
     } else {
       clearInterval(this.timerId);
       this.setState({
-        timer: !this.state.timer,
-        icon: '../src/icons/play-solid.svg'
+        timerOn: !this.state.timerOn
       });
     }
   }
 
-  handleButton() {
-    if (this.state.timer === false) {
-      this.handleTimer();
+  handleTimer() {
+    if (this.state.time > 0) {
+      clearInterval(this.timerId);
       this.setState({
-        icon: '../src/icons/pause-solid.svg',
-        timer: true
-
-      });
-    } else {
-      this.handleTimer(clearInterval(this.timerId));
-      this.setState({
-        timer: false
+        timerOn: false,
+        time: 0
       });
     }
   }
@@ -60,7 +52,10 @@ class Stopwatch extends React.Component {
           </div>
         </div>
         <div className="row">
-          <img src={this.state.icon} onClick={this.handleButton} />
+         { !this.state.timerOn
+           ? <img src='../src/icons/play-solid.svg' onClick={this.handleButton}/>
+           : <img src='../src/icons/pause-solid.svg' onClick={this.handleButton}/>
+          }
         </div>
       </div>
     );
@@ -68,31 +63,3 @@ class Stopwatch extends React.Component {
 }
 
 export default Stopwatch;
-
-/* getTemperatureClass() {
-    const { clicks } = this.state;
-    if (clicks < 4) return 'cold';
-    if (clicks < 7) return 'cool';
-    if (clicks < 10) return 'tepid';
-    if (clicks < 13) return 'warm';
-    if (clicks < 16) return 'hot';
-    return 'nuclear';
-  }
-
-  handleClick() {
-    this.setState({
-      clicks: this.state.clicks + 1
-    });
-  }
-
-  render() {
-    const temperatureClass = this.getTemperatureClass();
-    return (
-      <button
-        onClick={this.handleClick}
-        className={`hot-button ${temperatureClass}`}>
-        { this.props.label }
-      </button>
-    );
-  }
-} */
