@@ -5,6 +5,7 @@ export default class AppDrawer extends React.Component {
     super(props);
     this.state = {
       darker: false
+
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -12,6 +13,7 @@ export default class AppDrawer extends React.Component {
   handleClick() {
     this.setState({
       darker: !this.state.darker
+
     });
   }
 
@@ -19,6 +21,7 @@ export default class AppDrawer extends React.Component {
     return (
       <div className="container">
         <div className="row">
+          <div className="listContainer">
           {!this.state.darker
             ? <i className="fas fa-bars" onClick={this.handleClick}></i>
             : <ul>
@@ -31,7 +34,11 @@ export default class AppDrawer extends React.Component {
             </ul>
           }
         </div>
+        {this.state.darker &&
+        <div className="rightDark" onClick={this.handleClick}></div>
+      }
       </div>
+    </div>
     );
   }
 }
