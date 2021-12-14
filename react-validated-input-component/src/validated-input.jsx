@@ -33,9 +33,9 @@ export default class ValidatedInput extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <input type="password" onChange={this.handleChange}></input>
-        {(!this.state.check) ? <i className="fas fa-times"></i> : <i className="fas fa-check"></i> }
+        {(!this.state.check) ? <i className="fas fa-times color-red"></i> : <i className="fas fa-check color-green"></i> }
         </form>
-        <h4 className="textContainer">{this.state.message}</h4>
+        <h4 className="color-red">{this.state.message}</h4>
       </div>
 
     );

@@ -7,15 +7,17 @@ form {
 }
 
 .fa-check {
-  color: green;
   margin-left: 15px;
 }
 
 .fa-times {
-  color: red;
   margin-left: 15px;
 }
 
-.textContainer {
+.color-red {
   color: red;
+}
+
+.color-green {
+  color: green;
 }
