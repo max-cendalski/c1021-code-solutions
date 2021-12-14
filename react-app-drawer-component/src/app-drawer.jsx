@@ -4,7 +4,9 @@ export default class AppDrawer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      darker: false
+      darker: false,
+      overlay: '',
+      list: ''
 
     };
     this.handleClick = this.handleClick.bind(this);
@@ -12,18 +14,19 @@ export default class AppDrawer extends React.Component {
 
   handleClick() {
     this.setState({
-      darker: !this.state.darker
-
+      darker: !this.state.darker,
+      overlay: 'overlay-active',
+      list: 'list-container-active'
     });
   }
 
   render() {
     return (
-      <div className="container">
-        <div className="row">
-          <div className="listContainer">
+      <div className="container background-image">
+        <div className="row height100">
+          <div className={this.state.list}>
           {!this.state.darker
-            ? <i className="fas fa-bars" onClick={this.handleClick}></i>
+            ? <i className="fas fa-bars cursor-pointer" onClick={this.handleClick}></i>
             : <ul>
                 <h4>Choose your game</h4>
                 <li onClick={this.handleClick}>The Legend Of Zelda</li>
@@ -35,7 +38,7 @@ export default class AppDrawer extends React.Component {
           }
         </div>
         {this.state.darker &&
-        <div className="rightDark" onClick={this.handleClick}></div>
+        <div className={`overlay-not-active ${this.state.overlay}`} onClick={this.handleClick}></div>
       }
       </div>
     </div>
