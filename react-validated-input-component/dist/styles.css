@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+form {
+  margin-right: 10px;
+}
+
+.fa-check {
+  color: green;
+  margin-left: 15px;
+}
+
+.fa-times {
+  color: red;
+  margin-left: 15px;
+}
+
+.textContainer {
+  color: red;
+}
