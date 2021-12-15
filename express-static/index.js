@@ -4,7 +4,9 @@ const app = express();
 
 const pub = path.join(__dirname, 'public');
 console.log(pub);
-const stat = app.use(express.static('public'));
+
+const stat = express.static(path.join(__dirname, 'public'));
+app.use(stat);
 
 app.get('/', function (req, res) {
   res.send(stat);
