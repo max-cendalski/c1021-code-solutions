@@ -26,7 +26,7 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     host: '0.0.0.0',
-    port: process.env.DEV_SERVER_PORT,
+    port: 3000,
     static: {
       directory: distPath
     }
