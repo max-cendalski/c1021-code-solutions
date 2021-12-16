@@ -51,14 +51,11 @@ export default class App extends React.Component {
       body: JSON.stringify(newTodo)
     })
       .then(response => response.json())
-      .then(data => {
-        this.props.setState({
-          task: data
-        });
-      })
       .then(todo => {
-        this.state.setState({
-          todos: todo.concat(this.state.todos)
+        const todoArray = [];
+        todoArray.push(todo);
+        this.setState({
+          todos: todoArray.concat(this.state.todos)
         });
       });
   }
@@ -84,7 +81,8 @@ export default class App extends React.Component {
     const todosArray = this.state.todos;
     for (var i = 0; i < todosArray.length; i++) {
       if (todosArray[i].todoId === todoId) {
-        console.log('status', todosArray[i].isCompleted);
+        const status = !todosArray[i].isCompleted;
+        console.log(status);
       }
     }
 
