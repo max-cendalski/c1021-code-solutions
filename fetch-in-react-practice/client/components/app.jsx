@@ -43,6 +43,24 @@ export default class App extends React.Component {
     * TIP: Use Array.prototype.concat to create a new array containing the contents
     * of the old array, plus the object returned by the server.
     */
+    fetch('/api/todos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newTodo)
+    })
+      .then(response => response.json())
+      .then(data => {
+        this.props.setState({
+          task: data
+        });
+      })
+      .then(todo => {
+        this.state.setState({
+          todos: todo.concat(this.state.todos)
+        });
+      });
   }
 
   toggleCompleted(todoId) {
@@ -63,6 +81,22 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
+    const todosArray = this.state.todos;
+    for (var i = 0; i < todosArray.length; i++) {
+      if (todosArray[i].todoId === todoId) {
+        console.log('status', todosArray[i].isCompleted);
+      }
+    }
+
+    console.log(todosArray);
+    /* fetch('/api/todos/:{id}', {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    );
+    console.log(todoId); */
   }
 
   render() {
