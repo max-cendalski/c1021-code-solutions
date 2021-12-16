@@ -26,6 +26,15 @@ app.post('/api/auth/sign-up', (req, res, next) => {
 
   /* your code starts here */
 
+  argon2
+    .hash(password)
+    .then(hashedPassword => {
+      // eslint-disable-next-line no-console
+      console.log(hashedPassword);
+    })
+    .catch(err => {
+      console.error(err);
+    });
   /**
    * Hash the user's password with `argon2.hash()`
    * Then, 😉
