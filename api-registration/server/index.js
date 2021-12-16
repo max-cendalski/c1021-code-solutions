@@ -23,18 +23,24 @@ app.post('/api/auth/sign-up', (req, res, next) => {
   if (!username || !password) {
     throw new ClientError(400, 'username and password are required fields');
   }
-
   /* your code starts here */
-
   argon2
     .hash(password)
     .then(hashedPassword => {
-      // eslint-disable-next-line no-console
-      console.log(hashedPassword);
-    })
-    .catch(err => {
-      console.error(err);
+      const sql = `
+        insert into "users" ("username", "hashedPassword")
+        values ($1, $2)
+        returning *
+    `;
+      const params = [username, hashedPassword];
+      db.query(sql, params)
+        .then(result => {
+          const [updatedUser] = result.rows;
+          res.status(201).json({ updatedUser });
+        })
+        .catch(err => next(err));
     });
+
   /**
    * Hash the user's password with `argon2.hash()`
    * Then, 😉
