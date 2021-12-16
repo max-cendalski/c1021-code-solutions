@@ -81,20 +81,27 @@ export default class App extends React.Component {
     const todosArray = this.state.todos;
     for (var i = 0; i < todosArray.length; i++) {
       if (todosArray[i].todoId === todoId) {
-        const status = !todosArray[i].isCompleted;
-        console.log(status);
+        const newObject = todosArray[i];
+        newObject.isCompleted = !newObject.isCompleted;
       }
     }
 
-    console.log(todosArray);
-    /* fetch('/api/todos/:{id}', {
+    fetch('/api/todos/{todoId}', {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
-      }
-    }
-    );
-    console.log(todoId); */
+      },
+      body: JSON.stringify(todoId)
+    })
+      .then(response => response.json())
+      .then(data => {
+        // eslint-disable-next-line no-console
+        console.log('data:', data);
+      })
+      .catch(error => {
+        console.error('Error', error);
+      });
+
   }
 
   render() {
