@@ -52,10 +52,8 @@ export default class App extends React.Component {
     })
       .then(response => response.json())
       .then(todo => {
-        const todoArray = [];
-        todoArray.push(todo);
         this.setState({
-          todos: todoArray.concat(this.state.todos)
+          todos: [...this.state.todos, todo]
         });
       });
   }
@@ -86,7 +84,7 @@ export default class App extends React.Component {
       }
     }
 
-    fetch('/api/todos/{todoId}', {
+    /*  fetch('/api/todos/{todoId}', {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -100,8 +98,7 @@ export default class App extends React.Component {
       })
       .catch(error => {
         console.error('Error', error);
-      });
-
+      }); */
   }
 
   render() {
