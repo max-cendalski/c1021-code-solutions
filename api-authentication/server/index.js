@@ -53,25 +53,36 @@ app.post('/api/auth/sign-in', (req, res, next) => {
       from "users"
      where "username" = $1
   `;
-  const params = [username, password];
+  const params = [username];
   return db.query(sql, params)
     .then(result => {
+      const [user] = result.rows;
       if (!username) {
         throw new ClientError(401, 'invalid login');
       }
+      const { userId, hashedPassword } = user;
       argon2
-        .verify(username, password)
+        .verify(hashedPassword, password)
         .then(isMatching => {
-          // eslint-disable-next-line no-console
-          console.log('Does your password match?', isMatching);
-        })
-        .catch(err => {
-          console.error(err);
+          if (!isMatching) {
+            throw new ClientError(401, 'invalid login');
+          }
+          const payload = { userId, username };
+          const token = jwt.sign(payload, process.env.TOKEN_SECRET);
+          res.json({ token, user: payload });
         });
+    })
+    .catch(err => next(err));
+});
 
-    });
+app.use(errorMiddleware);
 
-  /**
+app.listen(process.env.PORT, () => {
+  // eslint-disable-next-line no-console
+  console.log(`express server listening on port ${process.env.PORT}`);
+});
+
+/**
    * Query the database to find the "userId" and "hashedPassword" for the "username".
    * Then, 😉
    *    If no user is found,
@@ -88,12 +99,3 @@ app.post('/api/auth/sign-in', (req, res, next) => {
    *      Catch any error.
    * Catch any error.
    */
-
-});
-
-app.use(errorMiddleware);
-
-app.listen(process.env.PORT, () => {
-  // eslint-disable-next-line no-console
-  console.log(`express server listening on port ${process.env.PORT}`);
-});
