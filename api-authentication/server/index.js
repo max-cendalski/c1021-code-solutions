@@ -58,17 +58,17 @@ app.post('/api/auth/sign-in', (req, res, next) => {
     .then(result => {
       if (!username) {
         throw new ClientError(401, 'invalid login');
-      } else {
-        argon2
-          .verify(username, password)
-          .then(isMatching => {
-            // eslint-disable-next-line no-console
-            console.log('Does your password match?', isMatching);
-          })
-          .catch(err => {
-            console.error(err);
-          });
       }
+      argon2
+        .verify(username, password)
+        .then(isMatching => {
+          // eslint-disable-next-line no-console
+          console.log('Does your password match?', isMatching);
+        })
+        .catch(err => {
+          console.error(err);
+        });
+
     });
 
   /**
