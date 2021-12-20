@@ -1,0 +1,29 @@
+USER CAN SIGN UP
+1)User types username and password inside form control elementand clicks Register button or Enter
+2)HandleSubmit is called and sends POST request to the server
+  and calls callback for the route api/auth/sign-up
+  checks is the user wrote username and password.
+  If both were added password is "hashed" using argon2 middleware
+4) db.query() is executed and credentials are written in database
+   in format define in database folder in schema.sql file
+
+
+USER CAN SIGN IN
+1) User types username and password inside form  and clicks Log In Button or Enter
+2) HandleSubmit is called and sends POST  request to the server
+    and calls callback for the route api/auth/sing-in
+   checks if the user filled up username and password fields
+   Express  checks database using parametrized queries
+   Express  uses argon2 verify method to compare passwords.
+   If they are the same jwt.sign method is being called and generate token
+   Funtionc handleSignIn stores token in local storage
+
+USER CAN STAY SIGN IN (EVEN IF THEY REFRESH THE PAGE)
+1) After first time render function in App.jsx is called, componentDidMount()
+  is called. In componentDidMount, react takes token from
+  local storage and checks if it's valid.
+  If it's valid changes values for user and isAuthorized properties in state object.
+
+USER CAN SIGN OUT
+1) If the user clicks sigh out button handleSignOut() function runs.
+   It removes token from local storage and changes property user in state object to null
