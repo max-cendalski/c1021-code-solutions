@@ -16,20 +16,28 @@ export default class App extends React.Component {
   }
 
   handleSubmit(event) {
-
     event.preventDefault();
     const formData = new FormData();
     formData.append('caption', 'image');
-    fetch('');
-    /**
+    fetch('/api/uploads', {
+      method: 'POST'
+    })
+      .then(response =>
+        response.json())
+      .then(data => {
+        console.log(data);
+        this.setState({ caption: '' });
+        this.fileInputRef.current.value = null;
+      })
+      .catch(err => console.error({ err }));
+  }
+
+  /**
      * Prevent the browser's default behavior for form submissions.
-     *
      * Create a `new` FormData object.
-     *
      * Append two entries to the form data object you created.
      *   1. "caption" the value of this.state.caption
      *   2. "image" the value of this.fileInputRef.current.files[0]
-     *
      * Use fetch() to send a POST request to /api/uploads. The body
      * should be the form data object you created (not a JSON string)
      * Headers are not necessary as fetch will use the correct Content-Type
@@ -50,7 +58,6 @@ export default class App extends React.Component {
      * https://reactjs.org/docs/uncontrolled-components.html#the-file-input-tag
      * https://reactjs.org/docs/refs-and-the-dom.html
      */
-  }
 
   render() {
     return (
@@ -91,3 +98,18 @@ export default class App extends React.Component {
     );
   }
 }
+
+/* fetch('/api/todos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newTodo)
+    })
+      .then(response => response.json())
+      .then(todo => {
+        this.setState({
+          todos: [...this.state.todos, todo]
+        });
+      });
+  } */

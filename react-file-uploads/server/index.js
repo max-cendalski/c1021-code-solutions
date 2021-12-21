@@ -35,14 +35,8 @@ app.post('/api/uploads', uploadsMiddleware, (req, res, next) => {
       const [image] = result.rows;
       res.status(201).json(image);
     })
-    .catch(err => next(err));
+    .catch(err => console.error(err));
 });
-/**
-   * - create a url for the image by combining '/images' with req.file.filename
-   * - insert the "caption" and "url" into the "images" table
-   * - respond with the inserted row data
-   * - catch any errors
-   */
 
 app.get('/api/images', (req, res, next) => {
   const sql = `
