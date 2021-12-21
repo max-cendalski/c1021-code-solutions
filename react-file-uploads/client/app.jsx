@@ -16,6 +16,11 @@ export default class App extends React.Component {
   }
 
   handleSubmit(event) {
+
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append('caption', 'image');
+    fetch('');
     /**
      * Prevent the browser's default behavior for form submissions.
      *
