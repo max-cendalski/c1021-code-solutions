@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Adder</title>
+</head>
+<body>
+  <script>
+    function makeAdder(x) {
+      return function (y) {
+        return x + y;
+      };
+    }
+
+    function multiplayer(x) {
+      return function (y) {
+        return x * y;
+      };
+    }
+
+    const add5 = makeAdder(5);
+    const add10 = makeAdder(10);
+    const multi5 = multiplayer(5);
+    console.log('multyplying 5 by 10:', multi5(10));
+
+    console.log('adding 5 to 2:', add5(2));
+    console.log('adding 10 to 2:', add10(2));
+
+    console.dir(add5);
+    console.dir(add10);
+    console.dir(multiplayer);
+    console.dir(multi5);
+  </script>
+</body>
+</html>
