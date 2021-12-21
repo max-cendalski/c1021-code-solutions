@@ -29,13 +29,20 @@ app.post('/api/uploads', uploadsMiddleware, (req, res, next) => {
     values ($1, $2)
     returning *
   `;
-  /**
+  const params = [caption, url];
+  db.query(sql, params)
+    .then(result => {
+      const [image] = result.rows;
+      res.status(201).json(image);
+    })
+    .catch(err => next(err));
+});
+/**
    * - create a url for the image by combining '/images' with req.file.filename
    * - insert the "caption" and "url" into the "images" table
    * - respond with the inserted row data
    * - catch any errors
    */
-});
 
 app.get('/api/images', (req, res, next) => {
   const sql = `
