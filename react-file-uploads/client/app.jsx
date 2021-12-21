@@ -18,18 +18,23 @@ export default class App extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData();
-    formData.append('caption', 'image');
+    formData.append('caption', this.state.caption);
+    formData.append('image', this.fileInputRef.current.files[0]);
+
     fetch('/api/uploads', {
-      method: 'POST'
+      method: 'POST',
+      body: formData
     })
       .then(response =>
         response.json())
-      .then(data => {
-        console.log(data);
+      .then(result => {
+        console.log('Success:', result);
         this.setState({ caption: '' });
         this.fileInputRef.current.value = null;
       })
-      .catch(err => console.error({ err }));
+      .catch(error => {
+        console.error('Error:', error);
+      });
   }
 
   /**
@@ -98,18 +103,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-/* fetch('/api/todos', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newTodo)
-    })
-      .then(response => response.json())
-      .then(todo => {
-        this.setState({
-          todos: [...this.state.todos, todo]
-        });
-      });
-  } */
