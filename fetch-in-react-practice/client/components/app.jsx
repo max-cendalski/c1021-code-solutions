@@ -52,7 +52,6 @@ export default class App extends React.Component {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         this.setState({
           todos: [...this.state.todos, data]
         });
@@ -80,9 +79,6 @@ export default class App extends React.Component {
     const todoIndex = this.state.todos.findIndex(item => item.todoId === todoId);
     const todoObject = this.state.todos[todoIndex];
     todoObject.isCompleted = !todoObject.isCompleted;
-    console.log(todoObject);
-    console.log('todoObject', todoObject);
-    console.log('todoId:', todoId);
     fetch(`/api/todos/${todoId}`, {
       method: 'PATCH',
       headers: {
@@ -92,8 +88,10 @@ export default class App extends React.Component {
     })
       .then(response => response.json())
       .then(data => {
-        // eslint-disable-next-line no-console
-        console.log('data:', data);
+        this.state.todos.splice(todoIndex, 1, data);
+        this.setState({
+          todos: this.state.todos
+        });
       })
       .catch(error => {
         console.error('Error', error);
